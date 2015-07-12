@@ -1,7 +1,9 @@
 Project Setup
 -------------
 1) Create a database & provide credentials in .env file.
-2) Run "php artisan migrate" from command line.
+2) Run "php artisan key:generate".
+3) Provide write mode for "storage" folder.
+4) Run "php artisan migrate" from command line.
     This will create users table with all the fields needed in this application.
 
 Application Architecture
