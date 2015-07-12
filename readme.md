@@ -2,7 +2,7 @@ Project Setup
 -------------
 1) Run "composer install" from command line to get vendor folder.
 
-2) Run "php artisan key:generate".
+2) Run "php artisan key:generate" to set application key.
 
 3) Provide write mode for "storage" folder.
 
