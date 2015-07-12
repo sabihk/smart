@@ -1,10 +1,13 @@
 Project Setup
 -------------
 1) Run "composer install" from command line to get vendor folder.
+
 2) Run "php artisan key:generate".
+
 3) Provide write mode for "storage" folder.
 
 4) Create a database & provide credentials in ".env" file. (Change .env.example to .env)
+
 5) Run "php artisan migrate" from command line.
     This will create users table with all the fields needed for this application.
 
