@@ -7,6 +7,7 @@ Project Setup
 Application Architecture
 ------------------------
 1) There are 2 user types:
+
     i) User
     ii) Admin
 
