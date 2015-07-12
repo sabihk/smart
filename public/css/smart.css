@@ -1,0 +1,42 @@
+.error {
+        color: #E9322D;
+        font-weight: bold;
+}
+
+.success {
+        color: #008000;
+        font-weight: bold;
+}
+
+.indicator {
+        padding-bottom: 10px;
+        margin-left: 90%;
+        margin-top: -30px;
+        display: none;   
+}
+
+.margin_top25 {
+        margin-top: 25px;
+}
+
+.cursor{
+        cursor: pointer !important;
+}
+
+.datepicker {
+        z-index: 1151 !important;
+}
+
+.txt_error {
+        border: 1px solid #E9322D !important;
+        box-shadow: 0 0 6px #F8B9B7 !important;
+}
+
+tr .center {
+        text-align: center;
+}
+
+.required {
+        color: #E02222;
+        padding-right: 3px;
+}
