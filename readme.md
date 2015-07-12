@@ -1,27 +1,48 @@
-## Laravel PHP Framework
+Project Setup
+-------------
+1) Create a database & provide credentials in .env file.
+2) Run "php artisan migrate" from command line.
+    This will create users table with all the fields needed in this application.
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+Application Architecture
+------------------------
+1) There are 2 user types:
+    i) User
+    ii) Admin
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+2) Any user can register in this application and will be provided 'User' role.
+    User will be displayed only "You are logged in!" message in home page.
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+3) For the first user to provide admin role manually change
+    'role' field (datatype enum) in "users" table from '0' to '1'.
+    
+    This will provide the user an Admin role and now Home page will display all the existing users
+    with the following functionality:
+    User Role   -> This dropdown will change user status
+    Edit        -> On click of this button, a modal with user details will be displayed.
+    Delete      -> This will soft delete the user.
 
-## Official Documentation
+Project Architecture/Design
+---------------------------
+1) database/migrations/2014_10_12_000000_create_users_table.php -> This file is having "users" table schema to create in database.
+2) Laravel provides user login & register authentication.
+    Modified the following files as per the requirement of this application:
+    
+    i) resources/views/auth/register.blade.php      -> User registration page view file.
+    ii) public/css/smart.css                        -> All the stylings for this application are added in this file.
+    iii) public/scripts/smart.js                    -> All the jQuery codes for this application are added in this file.
+    iv) app/Http/Controllers/Auth/AuthController.php-> This file is having server side validaiton for user registration & creates user after validation.
+    v) resources/views/home.blade.php               -> This is the view file of home page.
+    vi) resources/views/editUserDetails.blade.php   -> This is the view file for user details edit in modal.
+    vi) app/Http/Controllers/HomeController.php     -> All the logics of this applicaiton are written in this controller.
+    vii) app/User.php                               -> All the business logic of this application are written in this model.
+    
+3) public/datepicker -> Bootstrap datepicker plugin is user for birthday selection.
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+References
+----------
+Regeular expression for email & phone are taken from web.
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-### License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+API
+---
+This is not implemented.
