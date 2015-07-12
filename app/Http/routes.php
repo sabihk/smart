@@ -11,6 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', 'HomeController@index');
+Route::get('home', 'HomeController@index');
+
+Route::controllers([
+	'auth' => 'Auth\AuthController',
+	'password' => 'Auth\PasswordController',
+]);
+
+// If authenticated display home
+Route::group(array('middleware' => 'auth'), function() {
+        Route::controller('/', 'HomeController');
 });
