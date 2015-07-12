@@ -1,16 +1,18 @@
 Project Setup
 -------------
-1) Create a database & provide credentials in .env file.
+1) Run "composer install" from command line to get vendor folder.
 2) Run "php artisan key:generate".
 3) Provide write mode for "storage" folder.
-4) Run "php artisan migrate" from command line.
-    This will create users table with all the fields needed in this application.
+
+4) Create a database & provide credentials in ".env" file. (Change .env.example to .env)
+5) Run "php artisan migrate" from command line.
+    This will create users table with all the fields needed for this application.
 
 Application Architecture
 ------------------------
 1) There are 2 user types:
     
-    i) User
+    i)  User
     ii) Admin
 
 2) Any user can register in this application and will be provided 'User' role.
