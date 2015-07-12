@@ -25,6 +25,7 @@ Application Architecture
 Project Architecture/Design
 ---------------------------
 1) database/migrations/2014_10_12_000000_create_users_table.php -> This file is having "users" table schema to create in database.
+
 2) Laravel provides user login & register authentication.
     Modified the following files as per the requirement of this application:
     
