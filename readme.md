@@ -53,7 +53,7 @@ Project Architecture/Design
 
 References
 ----------
-Regeular expression for email & phone are taken from web.
+Regular expression for email & phone are taken from web.
 
 API
 ---
