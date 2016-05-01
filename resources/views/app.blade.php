@@ -4,11 +4,12 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>smart&geek</title>
+	<title>Smart</title>
 
 	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
+	<link href="{{ asset('/plugins/datatables/css/jquery.dataTables.min.css') }}" rel="stylesheet">
+	<link href="{{ asset('/plugins/datepicker/css/datepicker.css') }}" rel="stylesheet">
 	<link href="{{ asset('/css/smart.css') }}" rel="stylesheet">
-	<link href="{{ asset('/datepicker/css/datepicker.css') }}" rel="stylesheet">
 
 </head>
 <body>
@@ -52,7 +53,8 @@
 	<script>
 		var base = "{{ URL::to('/') }}";
 	</script>
-	<script src="{{ asset('/datepicker/js/bootstrap-datepicker.js') }}"></script>
+	<script src="{{ asset('/plugins/datatables/js/jquery.dataTables.min.js') }}"></script>
+	<script src="{{ asset('/plugins/datepicker/js/bootstrap-datepicker.js') }}"></script>
 	<script src="{{ asset('/scripts/smart.js') }}"></script>
 </body>
 </html>

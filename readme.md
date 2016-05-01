@@ -14,7 +14,7 @@ Project Setup
 Application Architecture
 ------------------------
 1) There are 2 user types:
-    
+
     i)  User
     ii) Admin
 
@@ -23,7 +23,7 @@ Application Architecture
 
 3) For the first user to provide admin role manually change
     'role' field (datatype enum) in "users" table from '0' to '1'.
-    
+
     This will provide the user an Admin role and now Home page will display all the existing users
     with the following functionality:
     User Role   -> This dropdown will change user status
@@ -36,7 +36,7 @@ Project Architecture/Design
 
 2) Laravel provides user login & register authentication.
     Modified the following files as per the requirement of this application:
-    
+
     i) resources/views/auth/register.blade.php      -> User registration page view file.
     ii) public/css/smart.css                        -> All the stylings for this application are added in this file.
     iii) public/scripts/smart.js                    -> All the jQuery codes for this application are added in this file.
@@ -45,8 +45,11 @@ Project Architecture/Design
     vi) resources/views/editUserDetails.blade.php   -> This is the view file for user details edit in modal.
     vi) app/Http/Controllers/HomeController.php     -> All the logics of this applicaiton are written in this controller.
     vii) app/User.php                               -> All the business logic of this application are written in this model.
-    
-3) public/datepicker -> Bootstrap datepicker plugin is user for birthday selection.
+
+3) Plugins used:
+
+    i)  public/plugins/datatables   -> Datatables plugin is used to display user details.
+    ii) public/plugins/datepicker   -> Bootstrap datepicker plugin is user for birthday selection.
 
 References
 ----------

@@ -54,6 +54,9 @@
 						<th class="col-xs-3">
 							Email
 						</th>
+						<th>
+							User Role(H)
+						</th>
 						<th class="col-xs-2">
 							User Role
 						</th>
@@ -82,6 +85,9 @@
 							{{ $user->email }}
 						</td>
 						<td>
+							{{ (0 == $user->role) ? 'User' : 'Admin' }}
+						</td>
+						<td>
 							<select class="form-control user_role"
 							data-user_id="{{ $user->id }}" data-token="{{ csrf_token() }}">
 							@foreach ($options as $key => $option)
@@ -108,7 +114,7 @@
 											<h4 class="modal-title" id="myModalLabel">Edit User Details</h4>
 										</div>
 										<div class="modal-body" id="{{ $user->id }}_edit_user_details_modal_body">
-											
+
 										</div>
 										<div class="modal-footer">
 											<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -120,7 +126,7 @@
 									</div>
 								</div>
 							</div>
-		
+
 							<button type="button" class="btn btn-danger btn-sm delete_user"
 							data-user_id="{{ $user->id }}" data-token="{{ csrf_token() }}">
 								Delete
