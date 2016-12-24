@@ -22,11 +22,11 @@ class CreateUsersTable extends Migration
                         $table->string('phone_number', 20);
                         $table->enum('role', [0, 1])->default(0);
                         $table->rememberToken();
-                        $table->timestamps();
+                        $table->nullableTimestamps();
                         $table->softDeletes();
                 });
         }
-    
+
         /**
          * Reverse the migrations.
          *
